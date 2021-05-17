@@ -1,3 +1,43 @@
 <resources>
     <string name="app_name">vaccine_on</string>
+    <string name="app_name2">VACCINE-ON</string>
+
+    //intro page
+    <string name="sign_up_for_hospital">의료기관 회원가입</string>
+    <string name="using_normal_mode">일반 모드 사용하기</string>
+
+    //log-in page
+    <string name="log_in">로그인</string>
+    <string name="id">아이디</string>
+    <string name="psw">비밀번호</string>
+    <string name="id_remember">아이디 기억하기</string>
+
+    //sign-up page
+    <string name="sign_up">회원가입</string>
+    <string name="hospital_code">병원 코드</string>
+    <string name="hospital_name">병원명</string>
+    <string name="hospital_phone_number">전화번호</string>
+    <string name="hospital_address">주소</string>
+    <string name="hospital_information">병원 정보</string>
+
+    //h-page
+    <string name="hospital_administration">병원 관리</string>
+    <string name="reservation_staus">예약여부</string>
+    <string name="possible">여유</string>
+    <string name="congestion">혼잡</string>
+    <string name="impossible">불가</string>
+    <string name="basic_information">기본정보</string>
+    <string name="phone_number">전화</string>
+    <string name="address">위치</string>
+    <string name="characteristics">특징</string>
+    <string name="surgery_hour">진료시간</string>
+    <string name="medical_information">진료정보</string>
+
+    //main page
+    <string name="hospital_search1">검색</string>
+    <string name="hospital_find">근처 병원 보기</string>
+    <string name="hospital_search3">지역, 병원을 검색하세요.</string>
+
+    <string name="hospital_search2">병원 검색</string>
+
 </resources>
