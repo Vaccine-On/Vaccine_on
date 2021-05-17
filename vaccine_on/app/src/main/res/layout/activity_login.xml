@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.25" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/log_in_email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="70dp"
@@ -40,7 +40,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/log_in_pwd"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
@@ -50,7 +50,7 @@
         android:layout_marginRight="70dp"
         android:ems="10"
         android:fontFamily="@font/wemakeprice_bold"
-        android:hint="@string/psw"
+        android:hint="@string/pwd"
         android:inputType="textPersonName"
         android:textColor="#FFFFFF"
         android:textColorHighlight="#FFFFFF"
@@ -58,7 +58,7 @@
         android:textColorLink="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/log_in_email" />
 
     <Button
         android:id="@+id/log_in"
@@ -73,7 +73,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/log_in_pwd" />
 
     <CheckBox
         android:id="@+id/checkBox"
@@ -83,8 +83,8 @@
         android:text="@string/id_remember"
         android:textColor="@color/white"
         app:buttonTint="@color/white"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintStart_toStartOf="@+id/log_in_pwd"
+        app:layout_constraintTop_toBottomOf="@+id/log_in_pwd" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

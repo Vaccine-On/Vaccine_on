@@ -17,21 +17,21 @@ public class IntroActivity extends AppCompatActivity {
         Button usingNomalMode = (Button) findViewById(R.id.using_normal_mode);
         Button signUpForHospital = (Button) findViewById(R.id.sign_up_for_hospital);
 
-        usingNomalMode.setOnClickListener((new View.OnClickListener() {
+        usingNomalMode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }
-        }));
+        });
 
-        signUpForHospital.setOnClickListener((new View.OnClickListener() {
+        signUpForHospital.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), SignupActivity.class);
+                Intent intent = new Intent(getApplicationContext(), SignUpActivity.class);
                 startActivity(intent);
             }
-        }));
+        });
 
     }
 }

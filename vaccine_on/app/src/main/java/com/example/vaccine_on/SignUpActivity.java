@@ -14,43 +14,46 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
-public class LoginActivity extends AppCompatActivity {
+public class SignUpActivity extends AppCompatActivity {
 
-    private Button log_in;
-    private EditText email_login;
-    private EditText pwd_login;
+    private EditText email_join;
+    private EditText pwd_join;
+    private Button sign_up;
     FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_signup);
 
-        email_login = (EditText) findViewById(R.id.log_in_email);
-        pwd_login = (EditText) findViewById(R.id.log_in_pwd);
+        email_join = (EditText) findViewById(R.id.sign_up_email);
+        pwd_join = (EditText) findViewById(R.id.sign_up_pwd);
+        sign_up = (Button) findViewById(R.id.sign_up);
 
         firebaseAuth = FirebaseAuth.getInstance();
 
-        log_in.setOnClickListener(new View.OnClickListener() {
+        sign_up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = email_login.getText().toString().trim();
-                String pwd = pwd_login.getText().toString().trim();
+                String email = email_join.getText().toString().trim();
+                String pwd = pwd_join.getText().toString().trim();
 
-                firebaseAuth.signInWithEmailAndPassword(email, pwd)
-                        .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
+                firebaseAuth.createUserWithEmailAndPassword(email, pwd)
+                        .addOnCompleteListener(SignUpActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
+
                                 if (task.isSuccessful()) {
-                                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                    Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
                                     startActivity(intent);
+                                    finish();
                                 } else {
-                                    Toast.makeText(LoginActivity.this, "로그인 오류", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(SignUpActivity.this, "등록 에러", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });
-
             }
         });
     }

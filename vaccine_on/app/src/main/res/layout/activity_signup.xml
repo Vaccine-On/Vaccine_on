@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main_color1"
-    tools:context=".SignupActivity">
+    tools:context=".SignUpActivity">
 
     <TextView
         android:id="@+id/sign_up_logo"
@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.050000012" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/hospital_information"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
@@ -30,11 +30,11 @@
         android:text="@string/hospital_information"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName3"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName3" />
+        app:layout_constraintBottom_toTopOf="@+id/sign_up_email"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_email" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/sign_up_email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
@@ -47,12 +47,15 @@
         android:hint="@string/id"
         android:inputType="textPersonName"
         android:textColorHint="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName4"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/sign_up_pwd"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/sign_up_pwd"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
@@ -62,15 +65,18 @@
         android:layout_marginBottom="20dp"
         android:ems="10"
         android:fontFamily="@font/wemakeprice_bold"
-        android:hint="@string/psw"
+        android:hint="@string/pwd"
         android:inputType="textPersonName"
         android:textColorHint="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName5"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/hospital_code"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/hospital_code"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
@@ -82,6 +88,9 @@
         android:hint="@string/hospital_code"
         android:inputType="textPersonName"
         android:textColorHint="@color/white"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorLink="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -89,7 +98,7 @@
         app:layout_constraintVertical_bias="0.45999998" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName6"
+        android:id="@+id/hospital_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
@@ -102,12 +111,15 @@
         android:hint="@string/hospital_name"
         android:inputType="textPersonName"
         android:textColorHint="@color/white"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorLink="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
+        app:layout_constraintTop_toBottomOf="@+id/hospital_code" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName7"
+        android:id="@+id/hospital_phone_number"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
@@ -120,12 +132,15 @@
         android:hint="@string/hospital_phone_number"
         android:inputType="textPersonName"
         android:textColorHint="@color/white"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorLink="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
+        app:layout_constraintTop_toBottomOf="@+id/hospital_name" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName8"
+        android:id="@+id/hospital_address"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
@@ -138,9 +153,12 @@
         android:hint="@string/hospital_address"
         android:inputType="textPersonName"
         android:textColorHint="@color/white"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorLink="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7" />
+        app:layout_constraintTop_toBottomOf="@+id/hospital_phone_number" />
 
     <Button
         android:id="@+id/sign_up"
@@ -154,6 +172,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName8" />
+        app:layout_constraintTop_toBottomOf="@+id/hospital_address" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

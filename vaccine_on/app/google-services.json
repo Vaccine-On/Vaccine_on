@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "643543459764",
+    "project_id": "vaccine-on",
+    "storage_bucket": "vaccine-on.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:643543459764:android:9dab8f3d2bf37bd85134e1",
+        "android_client_info": {
+          "package_name": "com.example.vaccine_on"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "643543459764-mcfsbh0kfh63lq2rn6scqhgca8c6oona.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtrRBPOq1LLLhpARspclnespO9Vejyz7s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "643543459764-mcfsbh0kfh63lq2rn6scqhgca8c6oona.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
