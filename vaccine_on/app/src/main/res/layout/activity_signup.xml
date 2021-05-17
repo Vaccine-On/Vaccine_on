@@ -143,7 +143,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/sign_up"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_margin="60dp"

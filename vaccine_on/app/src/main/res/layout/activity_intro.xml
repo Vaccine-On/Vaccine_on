@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.25" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/sign_up_for_hospital"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_margin="60dp"
@@ -36,7 +36,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/using_normal_mode"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginStart="60dp"
@@ -50,6 +50,6 @@
         app:backgroundTint="@color/main_color2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_for_hospital" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
