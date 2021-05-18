@@ -17,7 +17,7 @@
         <activity android:name=".MoreInformationActivity"/>
         <activity android:name=".AddInformationActivity" />
         <activity android:name=".SignUpActivity"/>
-        <activity android:name=".LoginActivity"/>
+        <activity android:name=".LogInActivity"/>
         <activity android:name=".IntroActivity"/>
         <activity android:name=".SplashActivity">
             <intent-filter>

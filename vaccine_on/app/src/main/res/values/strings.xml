@@ -4,6 +4,7 @@
 
     //intro page
     <string name="sign_up_for_hospital">의료기관 회원가입</string>
+    <string name="log_in_for_hospital">의료기관 로그인</string>
     <string name="using_normal_mode">일반 모드 사용하기</string>
 
     //log-in page

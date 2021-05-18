@@ -14,10 +14,11 @@ public class IntroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro);
 
-        Button usingNomalMode = (Button) findViewById(R.id.using_normal_mode);
+        Button usingNormalMode = (Button) findViewById(R.id.using_normal_mode);
         Button signUpForHospital = (Button) findViewById(R.id.sign_up_for_hospital);
+        Button logInForHospital = (Button) findViewById(R.id.log_in_for_hospital);
 
-        usingNomalMode.setOnClickListener(new View.OnClickListener() {
+        usingNormalMode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
@@ -29,6 +30,14 @@ public class IntroActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), SignUpActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        logInForHospital.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), LogInActivity.class);
                 startActivity(intent);
             }
         });

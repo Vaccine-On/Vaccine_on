@@ -14,7 +14,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -46,9 +45,9 @@ public class SignUpActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
 
                                 if (task.isSuccessful()) {
-                                    Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
+                                    Intent intent = new Intent(SignUpActivity.this, LogInActivity.class);
                                     startActivity(intent);
-                                    //finish();
+                                    finish();
                                 } else {
                                     Toast.makeText(SignUpActivity.this, "등록 에러", Toast.LENGTH_SHORT).show();
                                 }
