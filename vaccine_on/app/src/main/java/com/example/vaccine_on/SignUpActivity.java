@@ -48,7 +48,7 @@ public class SignUpActivity extends AppCompatActivity {
                                 if (task.isSuccessful()) {
                                     Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
                                     startActivity(intent);
-                                    finish();
+                                    //finish();
                                 } else {
                                     Toast.makeText(SignUpActivity.this, "등록 에러", Toast.LENGTH_SHORT).show();
                                 }

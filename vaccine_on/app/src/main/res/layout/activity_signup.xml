@@ -52,7 +52,8 @@
         android:textColorLink="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/sign_up_pwd"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextFields" />
 
     <EditText
         android:id="@+id/sign_up_pwd"
