@@ -45,15 +45,14 @@
         android:ems="10"
         android:fontFamily="@font/wemakeprice_bold"
         android:hint="@string/id"
-        android:inputType="textPersonName"
+        android:inputType="textEmailAddress"
         android:textColorHint="@color/white"
         android:textColor="#FFFFFF"
         android:textColorHighlight="#FFFFFF"
         android:textColorLink="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/sign_up_pwd"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TextFields" />
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <EditText
         android:id="@+id/sign_up_pwd"
@@ -67,7 +66,7 @@
         android:ems="10"
         android:fontFamily="@font/wemakeprice_bold"
         android:hint="@string/pwd"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:textColorHint="@color/white"
         android:textColor="#FFFFFF"
         android:textColorHighlight="#FFFFFF"
