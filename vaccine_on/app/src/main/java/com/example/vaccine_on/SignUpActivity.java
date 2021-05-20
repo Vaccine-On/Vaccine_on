@@ -119,7 +119,8 @@ public class SignUpActivity extends AppCompatActivity {
                         }
                         else {
                             pd.dismiss();
-                            Toast.makeText(SignUpActivity.this, "이미 존재하는 이메일입니다.", Toast.LENGTH_SHORT).show();
+                            Log.e("!!!!!!!!!!!", task.getException().toString());
+                            //Toast.makeText(SignUpActivity.this, "이미 존재하는 이메일입니다.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
