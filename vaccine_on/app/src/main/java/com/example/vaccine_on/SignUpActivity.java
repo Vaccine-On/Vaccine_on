@@ -29,10 +29,8 @@ public class SignUpActivity extends AppCompatActivity {
 
     private EditText email_join;
     private EditText pwd_join;
-    private EditText hospital_code_join;
-    private EditText hospital_name_join;
-    private EditText hospital_phone_number_join;
-    private EditText hospital_address_join;
+    private EditText user_name_join;
+    private EditText user_nickname_join;
     private Button sign_up;
 
     FirebaseAuth firebaseAuth;
@@ -48,10 +46,8 @@ public class SignUpActivity extends AppCompatActivity {
 
         email_join = (EditText) findViewById(R.id.sign_up_email);
         pwd_join = (EditText) findViewById(R.id.sign_up_pwd);
-        hospital_code_join = (EditText) findViewById(R.id.hospital_code);
-        hospital_name_join = (EditText) findViewById(R.id.hospital_name);
-        hospital_phone_number_join = (EditText) findViewById(R.id.hospital_phone_number);
-        hospital_address_join = (EditText) findViewById(R.id.hospital_address);
+        user_name_join = (EditText) findViewById(R.id.user_name);
+        user_nickname_join = (EditText) findViewById(R.id.user_nickname);
         sign_up = (Button) findViewById(R.id.sign_up);
 
         firebaseAuth = FirebaseAuth.getInstance();
@@ -66,24 +62,21 @@ public class SignUpActivity extends AppCompatActivity {
 
                 String email = email_join.getText().toString().trim();
                 String pwd = pwd_join.getText().toString().trim();
-                String hospital_code = hospital_code_join.getText().toString().trim();
-                String hospital_name = hospital_name_join.getText().toString().trim();
-                String hospital_phone_number = hospital_phone_number_join.getText().toString().trim();
-                String hospital_address = hospital_address_join.getText().toString().trim();
+                String user_name = user_name_join.getText().toString().trim();
+                String user_nickname = user_nickname_join.getText().toString().trim();
 
                 if(TextUtils.isEmpty(email) || TextUtils.isEmpty(pwd) ||
-                        TextUtils.isEmpty(hospital_code) || TextUtils.isEmpty(hospital_name) ||
-                        TextUtils.isEmpty(hospital_phone_number) || TextUtils.isEmpty(hospital_address)) {
+                        TextUtils.isEmpty(user_name) || TextUtils.isEmpty(user_nickname)) {
                     Toast.makeText(SignUpActivity.this, "모든 항목을 입력해주세요", Toast.LENGTH_SHORT).show();
                 } else if (pwd.length() < 6) {
                     Toast.makeText(SignUpActivity.this, "비밀번호를 6자 이상으로 설정해주세요", Toast.LENGTH_SHORT).show();
                 } else {
-                    register(email, pwd, hospital_code, hospital_name, hospital_phone_number, hospital_address);
+                    register(email, pwd, user_name, user_nickname);
                 }
             }
         });
     }
-    private void register(final String email, String pwd, String hospital_code, String hospital_name, String hospital_phone_number, String hospital_address){
+    private void register(final String email, String pwd, String user_name, String user_nickname){
         firebaseAuth.createUserWithEmailAndPassword(email, pwd)
                 .addOnCompleteListener(SignUpActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -94,10 +87,8 @@ public class SignUpActivity extends AppCompatActivity {
                             HashMap<String, Object> user = new HashMap<>();
                             user.put("email", email);
                             user.put("pwd", pwd);
-                            user.put("hospital_code", hospital_code);
-                            user.put("hospital_name", hospital_name);
-                            user.put("hospital_phone_number", hospital_phone_number);
-                            user.put("hospital_address", hospital_address);
+                            user.put("user_name", user_name);
+                            user.put("user_nickname", user_nickname);
 
                             firestoreDb.collection("users")
                                     .add(user)

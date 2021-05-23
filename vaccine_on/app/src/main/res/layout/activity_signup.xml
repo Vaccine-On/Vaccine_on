@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:fontFamily="@font/wemakeprice_bold"
-        android:text="@string/hospital_information"
+        android:text="@string/user_information"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/sign_up_email"
@@ -71,34 +71,31 @@
         android:textColor="#FFFFFF"
         android:textColorHighlight="#FFFFFF"
         android:textColorLink="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/hospital_code"
+        app:layout_constraintBottom_toTopOf="@+id/user_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/hospital_code"
+        android:id="@+id/user_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
-        android:layout_marginLeft="70dp"
         android:layout_marginEnd="70dp"
-        android:layout_marginRight="70dp"
         android:ems="10"
         android:fontFamily="@font/wemakeprice_bold"
-        android:hint="@string/hospital_code"
+        android:hint="@string/user_name"
         android:inputType="textPersonName"
-        android:textColorHint="@color/white"
         android:textColor="#FFFFFF"
         android:textColorHighlight="#FFFFFF"
+        android:textColorHint="@color/white"
         android:textColorLink="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.45999998" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/hospital_name"
+        android:id="@+id/user_nickname"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
@@ -108,7 +105,7 @@
         android:layout_marginRight="70dp"
         android:ems="10"
         android:fontFamily="@font/wemakeprice_bold"
-        android:hint="@string/hospital_name"
+        android:hint="@string/user_nickname"
         android:inputType="textPersonName"
         android:textColorHint="@color/white"
         android:textColor="#FFFFFF"
@@ -116,49 +113,8 @@
         android:textColorLink="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hospital_code" />
+        app:layout_constraintTop_toBottomOf="@+id/user_name" />
 
-    <EditText
-        android:id="@+id/hospital_phone_number"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="70dp"
-        android:layout_marginRight="70dp"
-        android:ems="10"
-        android:fontFamily="@font/wemakeprice_bold"
-        android:hint="@string/hospital_phone_number"
-        android:inputType="textPersonName"
-        android:textColorHint="@color/white"
-        android:textColor="#FFFFFF"
-        android:textColorHighlight="#FFFFFF"
-        android:textColorLink="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hospital_name" />
-
-    <EditText
-        android:id="@+id/hospital_address"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="70dp"
-        android:layout_marginRight="70dp"
-        android:ems="10"
-        android:fontFamily="@font/wemakeprice_bold"
-        android:hint="@string/hospital_address"
-        android:inputType="textPersonName"
-        android:textColorHint="@color/white"
-        android:textColor="#FFFFFF"
-        android:textColorHighlight="#FFFFFF"
-        android:textColorLink="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hospital_phone_number" />
 
     <Button
         android:id="@+id/sign_up"
@@ -172,6 +128,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hospital_address" />
+        app:layout_constraintTop_toBottomOf="@+id/user_nickname" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
