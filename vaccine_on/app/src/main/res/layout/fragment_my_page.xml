@@ -8,8 +8,179 @@
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="50dp"
         android:gravity="center"
-        android:text="@string/sign_up" />
+        android:text="마이페이지"
+        android:background="@color/main_color4"
+        android:textSize="18sp"
+        android:fontFamily="@font/nanum_square_r"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="55dp">
+
+        <ImageView
+            android:id="@+id/myuser"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/myuser"
+            android:baseline="45dp"/>
+
+        <TextView
+            android:layout_width="330dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="30dp"
+            android:text="닉네임"
+            android:textSize="18sp"
+            android:fontFamily="@font/nanum_square_b"/>
+
+    </LinearLayout>
+
+    //개인정보
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="135dp"
+        android:text="개인정보"
+        android:paddingLeft="10dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/nanum_square_b" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="175dp"
+        android:text="비밀번호 변경"
+        android:paddingLeft="10dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/nanum_square_r" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="210dp"
+        android:text="닉네임 변경"
+        android:paddingLeft="10dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/nanum_square_r" />
+
+    //이용안내
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="250dp"
+        android:text="이용안내"
+        android:paddingLeft="10dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/nanum_square_b"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="290dp"
+        android:text="앱 버전"
+        android:paddingLeft="10dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/nanum_square_r" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="325dp"
+        android:text="문의하기"
+        android:paddingLeft="10dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/nanum_square_r" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="360dp"
+        android:text="공지사항"
+        android:paddingLeft="10dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/nanum_square_r" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="395dp"
+        android:text="서비스 이용약관"
+        android:paddingLeft="10dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/nanum_square_r" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="430dp"
+        android:text="개인정보 처리방침"
+        android:paddingLeft="10dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/nanum_square_r" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="465dp"
+        android:text="오픈소스 라이선스"
+        android:paddingLeft="10dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/nanum_square_r" />
+
+    //기타
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="505dp"
+        android:text="기타"
+        android:paddingLeft="10dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/nanum_square_b"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="545dp"
+        android:text="회원탈퇴"
+        android:paddingLeft="10dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/nanum_square_r" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="585dp"
+        android:text="내가 쓴 후기"
+        android:paddingLeft="10dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/nanum_square_b"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="630dp"
+        android:text="내가 쓴 게시글"
+        android:paddingLeft="10dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/nanum_square_b"/>
+
 
 </FrameLayout>

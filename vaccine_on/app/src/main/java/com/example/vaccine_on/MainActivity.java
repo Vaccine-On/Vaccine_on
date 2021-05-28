@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         home = findViewById(R.id.home);
         my_page = findViewById(R.id.my_page);
 
-        board.setOnClickListener(this);
+        board.setOnClickListener((View.OnClickListener) this);
         home.setOnClickListener((View.OnClickListener) this);
         my_page.setOnClickListener((View.OnClickListener) this);
 
