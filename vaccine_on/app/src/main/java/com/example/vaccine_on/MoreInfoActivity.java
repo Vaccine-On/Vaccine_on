@@ -39,12 +39,13 @@ public class MoreInfoActivity extends AppCompatActivity {
         homepage.setText(intent.getStringExtra("url"));
         Log.d("상세보기", "성공" + intent.getStringExtra("name"));
 
+        String urlAdress = homepage.toString();
 
         urlbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent urlIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(homepage.toString()));
-                Log.d("홈페이지연결", homepage.toString());
+                Intent urlIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(urlAdress));
+                Log.d("홈페이지연결", urlAdress);
                 startActivity(urlIntent);
             }
         });
