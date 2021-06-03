@@ -42,7 +42,7 @@ public class MainFragment extends Fragment {
     RecyclerView recyclerView;
 
 
-    String key = ""; //api신청 후 받은 key 값
+    String key = "0GP9DsbCheBOEwNQR3fWFUfgU2xIhZN3AvV6Y6tjn87KZFeQ0T6m2JL9DvUdSjciSip%2FKkyhltgq9LTnqQytag%3D%3D"; //api신청 후 받은 key 값
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -152,7 +152,9 @@ public class MainFragment extends Fragment {
 
 
     void getXmlData() {
-        String hospitalName = null, hospitalAddr = null;
+        String hospitalName = null, hospitalAddr = null, hospitalXPos=null, hospitalYPos=null, hospitalPostNo=null,
+                hospitalUrl=null, hospitalclCd=null, hospitalYkiho = null, hospitalTelNo = null, hospitalclCdNm = null, hospitalSidoCd = null,
+                hospitalSdioCdNm = null, hospitalSgguCdNm = null;
         String str = inputHosp.getText().toString();
 
         String queryUrl = "http://apis.data.go.kr/B551182/hospInfoService/getHospBasisList?ServiceKey=" + key + "&emdongNm=" + str + "&pageNo=1";
@@ -186,6 +188,17 @@ public class MainFragment extends Fragment {
                             // 아이템 시작
                             hospitalName = null;
                             hospitalAddr = null;
+                            hospitalXPos = null;
+                            hospitalYPos = null;
+                            hospitalPostNo = null;
+                            hospitalUrl = null;
+                            hospitalclCd = null;
+                            hospitalYkiho = null;
+                            hospitalTelNo = null;
+                            hospitalclCdNm = null;
+                            hospitalSidoCd = null;
+                            hospitalSdioCdNm = null;
+                            hospitalSgguCdNm = null;
                         }
                         else if (tag.equals("addr")) {
                             // 주소
@@ -196,13 +209,74 @@ public class MainFragment extends Fragment {
                             // 병원명
                             xpp.next();
                             hospitalName = xpp.getText();
+                        } else if (tag.equals("XPos")) {
+                            // x좌표
+                            xpp.next();
+                            hospitalXPos = xpp.getText();
+                        }
+                        else if (tag.equals("YPos")) {
+                            // y좌표
+                            xpp.next();
+                            hospitalYPos = xpp.getText();
+                        }
+                        else if (tag.equals("postNo")) {
+                            // 우편번호
+                            xpp.next();
+                            hospitalPostNo = xpp.getText();
+                        }
+                        else if (tag.equals("hospUrl")) {
+                            // 홈페이지
+                            xpp.next();
+                            hospitalUrl = xpp.getText();
+                        }
+                        else if (tag.equals("clCd")) {
+                            // 종별코드
+                            xpp.next();
+                            hospitalclCd = xpp.getText();
+                        }
+                        else if (tag.equals("ykiho")) {
+                            // 암호화된 요양기호
+                            xpp.next();
+                            hospitalYkiho = xpp.getText();
+                        }
+                        else if (tag.equals("telno")) {
+                            // 전화번호
+                            xpp.next();
+                            hospitalTelNo = xpp.getText();
+                        }
+                        else if (tag.equals("clCdNm")) {
+                            // 종별코드명
+                            xpp.next();
+                            hospitalclCdNm = xpp.getText();
+                        }
+                        else if (tag.equals("yadmNm")) {
+                            // 병원명
+                            xpp.next();
+                            hospitalName = xpp.getText();
+                        }
+                        else if (tag.equals("sidoCd")) {
+                            // 시도코드
+                            xpp.next();
+                            hospitalSidoCd = xpp.getText();
+                        }
+                        else if (tag.equals("sidoCdNm")) {
+                            // 시도명
+                            xpp.next();
+                            hospitalSdioCdNm = xpp.getText();
+                        }
+                        else if (tag.equals("sgguCdNm")) {
+                            // 시군구명
+                            xpp.next();
+                            hospitalSgguCdNm = xpp.getText();
                         }
                         break;
                     case XmlPullParser.END_TAG:
                         tag = xpp.getName();
                         if (tag.equals("item")){
                             // 아이템 하나 끝
-                            tmpItmes.add(new HospInfo(hospitalName, hospitalAddr)); //api로 받아온 정보 객체로 저장. 이거를 itemArrayList에 저장.
+                            tmpItmes.add(new HospInfo(hospitalName, hospitalAddr, hospitalXPos, hospitalYPos,
+                                    hospitalPostNo, hospitalUrl, hospitalclCd, hospitalYkiho, hospitalTelNo,
+                                    hospitalclCdNm, hospitalSidoCd, hospitalSdioCdNm, hospitalSgguCdNm)); //api로 받아온 정보 객체로 저장. 이거를 itemArrayList에 저장.
                         }
                         break;
                 }
