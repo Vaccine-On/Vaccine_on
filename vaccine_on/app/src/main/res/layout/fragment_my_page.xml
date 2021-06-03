@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MyPageFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -29,9 +30,11 @@
             android:baseline="45dp"/>
 
         <TextView
+            android:id="@+id/show_nickname"
             android:layout_width="330dp"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
+            android:layout_weight="1"
             android:paddingLeft="30dp"
             android:text="닉네임"
             android:textSize="18sp"
@@ -61,6 +64,7 @@
         android:fontFamily="@font/nanum_square_r" />
 
     <TextView
+        android:id="@+id/change_nickname"
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:gravity="center_vertical"
@@ -162,6 +166,7 @@
         android:textSize="15sp"
         android:fontFamily="@font/nanum_square_r" />
 
+    // 내가 쓴 후기
     <TextView
         android:layout_width="match_parent"
         android:layout_height="40dp"
@@ -172,6 +177,7 @@
         android:textSize="15sp"
         android:fontFamily="@font/nanum_square_b"/>
 
+    // 내가 쓴 게시글
     <TextView
         android:layout_width="match_parent"
         android:layout_height="40dp"
