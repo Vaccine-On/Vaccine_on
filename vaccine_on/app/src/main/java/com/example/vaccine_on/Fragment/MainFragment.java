@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.vaccine_on.HospInfo;
@@ -35,7 +36,7 @@ public class MainFragment extends Fragment {
 
     EditText inputHosp;
     TextView hospName, hospAddr;
-    Button searchButton;
+    ImageButton searchButton;
     HospInfo hospInfo; //이거 일단 한번도 안썼음, 객체(APITest에서는 item)
     ArrayList<HospInfo> itemArrayList = new ArrayList<HospInfo>();// 이거는 api받아온 데이터 아이템 하나하나 배열로 만들어 놓음
     ArrayList<HospInfo> itemViewArrayList = new ArrayList<HospInfo>();
@@ -94,7 +95,7 @@ public class MainFragment extends Fragment {
         inputHosp = (EditText)rootview.findViewById(R.id.inputHosp);
         hospName = (TextView)rootview.findViewById(R.id.hospName);
         hospAddr = (TextView)rootview.findViewById(R.id.hospAddr);
-        searchButton = (Button)rootview.findViewById(R.id.searchButton);
+        searchButton = (ImageButton)rootview.findViewById(R.id.searchButton);
 
 
         // 리사이클러뷰에 LinearLayoutManager 객체 지정.
