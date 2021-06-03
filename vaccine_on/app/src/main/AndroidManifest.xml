@@ -14,9 +14,10 @@
         android:theme="@style/Theme.Vaccine_on"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity android:name=".MoreInfoActivity"></activity>
+        <activity android:name=".ChangeNicknameActivity"></activity>
+        <activity android:name=".MoreInfoActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".BoardDetailActivity"></activity>
+        <activity android:name=".BoardDetailActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".LogInActivity" />
         <activity android:name=".SplashActivity">

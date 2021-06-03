@@ -11,7 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.vaccine_on.BoardDetail;
+import com.example.vaccine_on.BoardDetailActivity;
 import com.example.vaccine_on.BoardItemData;
 import com.example.vaccine_on.R;
 
@@ -48,7 +48,7 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.Holder> {
             @Override
             public void onClick(View v) {
                 if (itemposition != RecyclerView.NO_POSITION) {
-                    Intent intent = new Intent(context, BoardDetail.class);
+                    Intent intent = new Intent(context, BoardDetailActivity.class);
                     context.startActivity(intent);
                 }
             }
