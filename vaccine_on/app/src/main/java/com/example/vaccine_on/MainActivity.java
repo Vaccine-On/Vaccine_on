@@ -9,6 +9,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.vaccine_on.Fragment.BoardFragment;
 import com.example.vaccine_on.Fragment.MainFragment;
@@ -18,18 +19,19 @@ public class MainActivity extends AppCompatActivity {
     private final int mainFragment = 1;
     private final int boardFragment = 2;
     private final int myPageFragment = 3;
+    TextView title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        title = findViewById(R.id.title);
 
         findViewById(R.id.home).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 FragmentView(mainFragment);
-
+                title.setText("병원 검색");
             }
         });
 
@@ -37,8 +39,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 FragmentView(boardFragment);
-
-
+                title.setText("게시판");
             }
         });
 
@@ -46,8 +47,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 FragmentView(myPageFragment);
-
-
+                title.setText("마이페이지");
             }
         });
         FragmentView(mainFragment);
