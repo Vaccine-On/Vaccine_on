@@ -1,13 +1,18 @@
 package com.example.vaccine_on.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import com.example.vaccine_on.ChangeNicknameActivity;
 import com.example.vaccine_on.R;
 
 /**
@@ -32,7 +37,7 @@ public class MyPageFragment extends Fragment {
 
     /**
      * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.   
+     * this fragment using the provided parameters.
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
@@ -51,16 +56,62 @@ public class MyPageFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
+    // 클릭 이벤트
+    /*public void text_Click(View view) {
+        if (view.getId() == R.id.change_nickname) {
+            Intent intent = new Intent(getActivity(), ChangeNicknameActivity.class);
+            startActivity(intent);
+        }
+
+    }*/
+
+
+
+    //프래그먼트 화면 전환
+    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_my_page, container, false);
+
+        ViewGroup rootview = (ViewGroup)inflater.inflate(R.layout.fragment_my_page, container, false);
+
+
+        TextView text = (TextView)rootview.findViewById(R.id.change_nickname);
+
+        text.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), ChangeNicknameActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        // 사용자 정보 가져오기
+        /*private static FirebaseFirestore db = FirebaseFirestore.getInstance();
+        CollectionReference docRef = db.collection("users");
+        docRef.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if(task.isSuccessful()) {
+                    for (QueryDocumentSnapshot document : task.getResult()) {
+
+                    }
+
+                }
+            }
+        })*/
+        return rootview;
     }
+
 }
+

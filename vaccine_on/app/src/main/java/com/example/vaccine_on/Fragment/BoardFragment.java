@@ -3,12 +3,19 @@ package com.example.vaccine_on.Fragment;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.vaccine_on.Adapter.BoardAdapter;
+import com.example.vaccine_on.BoardItemData;
 import com.example.vaccine_on.R;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +23,10 @@ import com.example.vaccine_on.R;
  * create an instance of this fragment.
  */
 public class BoardFragment extends Fragment {
+
+    private RecyclerView recyclerView;
+    private BoardAdapter adapter;
+    private ArrayList<BoardItemData> list = new ArrayList<>();
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -60,7 +71,17 @@ public class BoardFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_board, container, false);
+        ViewGroup rootView = (ViewGroup)inflater.inflate(R.layout.fragment_board, container, false);
+
+        recyclerView = (RecyclerView) rootView.findViewById(R.id.board_recyclerview);
+
+        list = BoardItemData.createContactsList(10);
+        recyclerView.setHasFixedSize(true);
+        adapter = new BoardAdapter(getActivity(), list);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView.setAdapter(adapter);
+
+        Log.e("Frag", "MainFragment");
+        return rootView;
     }
 }
