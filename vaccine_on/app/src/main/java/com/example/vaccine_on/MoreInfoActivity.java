@@ -2,6 +2,7 @@ package com.example.vaccine_on;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.content.Intent;
@@ -66,7 +67,10 @@ public class MoreInfoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent callIntent = new Intent("android.intent.action.DIAL", Uri.parse(call));
+                    String telResult = changeTel(intent.getStringExtra("tel"));
+
+                    Intent callIntent = new Intent(Intent.ACTION_DIAL);
+                    callIntent.setData(Uri.parse(telResult));
                     Log.d("홈페이지연결", call);
                     startActivity(callIntent);
                 } catch (Exception e){
@@ -76,4 +80,17 @@ public class MoreInfoActivity extends AppCompatActivity {
         });
 
     }
+
+    String changeTel (String telOrigin) {
+        String telResult = "";
+        for (int i=0; i<telOrigin.length(); i++) {
+            if (telOrigin.charAt(i) >= '0' && telOrigin.charAt(i) <= '9') {
+                telResult += telOrigin.charAt(i);
+            }
+        }
+        Log.d("전화번호", ""+telResult);
+        return telResult;
+    }
 }
+
+
