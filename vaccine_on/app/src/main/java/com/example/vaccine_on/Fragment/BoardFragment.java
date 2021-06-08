@@ -1,5 +1,7 @@
 package com.example.vaccine_on.Fragment;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,9 +15,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.vaccine_on.Activity.BoardDetailActivity;
+import com.example.vaccine_on.Activity.BoardWriteActivity;
 import com.example.vaccine_on.Adapter.BoardAdapter;
 import com.example.vaccine_on.BoardItemData;
 import com.example.vaccine_on.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -41,7 +46,14 @@ public class BoardFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-        Log.e("Frag", "MainFragment");
+        FloatingActionButton writeBtn = rootView.findViewById(R.id.writeBtn);
+        writeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),BoardWriteActivity.class);
+                startActivity(intent);
+            }
+        });
         return rootView;
     }
 
