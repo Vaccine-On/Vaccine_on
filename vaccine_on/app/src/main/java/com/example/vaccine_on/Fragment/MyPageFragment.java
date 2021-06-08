@@ -57,9 +57,35 @@ public class MyPageFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // 클릭 이벤트
-        // 여기가 아니라 onCreateView에서 작업해야될 것 같아! -희주-
-        TextView text = (TextView) getView().findViewById(R.id.change_nickname);
+        if (getArguments() != null) {
+            mParam1 = getArguments().getString(ARG_PARAM1);
+            mParam2 = getArguments().getString(ARG_PARAM2);
+        }
+
+    }
+
+    // 클릭 이벤트
+    /*public void text_Click(View view) {
+        if (view.getId() == R.id.change_nickname) {
+            Intent intent = new Intent(getActivity(), ChangeNicknameActivity.class);
+            startActivity(intent);
+        }
+
+    }*/
+
+
+
+    //프래그먼트 화면 전환
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+
+        ViewGroup rootview = (ViewGroup)inflater.inflate(R.layout.fragment_my_page, container, false);
+
+
+        TextView text = (TextView)rootview.findViewById(R.id.change_nickname);
 
         text.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,22 +95,6 @@ public class MyPageFragment extends Fragment {
             }
         });
 
-
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-
-    }
-
-
-    //프래그먼트 화면 전환
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_my_page, container, false);
 
         // 사용자 정보 가져오기
         /*private static FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -100,9 +110,8 @@ public class MyPageFragment extends Fragment {
                 }
             }
         })*/
+        return rootview;
     }
-
-
 
 }
 

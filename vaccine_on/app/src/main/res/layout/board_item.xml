@@ -19,6 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:fontFamily="@font/nanum_square_r"
             android:text="2021-06-03"
             android:textSize="18sp" />
 
@@ -30,6 +31,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="5dp"
+            android:fontFamily="@font/nanum_square_b"
             android:text="코로나 검사 후기"
             android:textSize="22sp" />
 

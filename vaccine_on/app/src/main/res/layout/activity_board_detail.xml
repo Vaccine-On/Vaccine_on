@@ -44,6 +44,7 @@
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/nanum_square_b"
                 android:text="코로롱"
                 android:layout_margin="5dp"/>
         </LinearLayout>
@@ -57,18 +58,27 @@
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/nanum_square_r"
+                android:paddingTop="8dp"
+                android:paddingBottom="3dp"
                 android:text="2021-06-03" />
 
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="코로나 검사 후기.." />
+                android:fontFamily="@font/nanum_square_b"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="코로나 검사 후기.."
+                android:textSize="15sp"/>
 
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/nanum_square_r"
+                android:lineSpacingExtra="6dp"
                 android:text="어제부터 몸에 열이 오르고 오한에 근육통에....갑자기 무서운 생각이
 들어서 아침되자마자 겨우 챙겨서 kf94 마스크 끼고 택시도 조심히
 타고 병원에 갔어요. 병원가서 검사하고 수액 맞고 집에 와서 검사 결
