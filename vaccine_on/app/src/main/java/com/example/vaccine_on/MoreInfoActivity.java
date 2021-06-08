@@ -16,6 +16,7 @@ public class MoreInfoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_more_info);
+
         TextView infoView = findViewById(R.id.infoView);
         TextView hospitallInfoView = findViewById(R.id.hospitallInfoView);
         TextView nameView = findViewById(R.id.nameView);
@@ -26,10 +27,11 @@ public class MoreInfoActivity extends AppCompatActivity {
         TextView address = findViewById(R.id.address);
         TextView tel = findViewById(R.id.tel);
         TextView homepage = findViewById(R.id.homepage);
-        Button urlbutton = findViewById(R.id.urlButton);
+        Button urlButton = findViewById(R.id.urlButton);
+        Button callButton = findViewById(R.id.callButton);
 
 
-
+        //상세정보 보여주기
         Intent intent = getIntent();
         Log.d("겟 인텐트", "성공");
         infoView.setText(intent.getStringExtra("name"));
@@ -39,15 +41,39 @@ public class MoreInfoActivity extends AppCompatActivity {
         homepage.setText(intent.getStringExtra("url"));
         Log.d("상세보기", "성공" + intent.getStringExtra("name"));
 
-        String urlAdress = homepage.toString();
+        String urlAdress = intent.getStringExtra("url");
+        String call = intent.getStringExtra("tel");
 
-        urlbutton.setOnClickListener(new View.OnClickListener() {
+
+        //병원 사이트 이동
+        Log.d("연결 전", urlAdress);
+        urlButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent urlIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(urlAdress));
-                Log.d("홈페이지연결", urlAdress);
-                startActivity(urlIntent);
+                try {
+                    Intent urlIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(urlAdress));
+                    Log.d("홈페이지연결", urlAdress);
+                    startActivity(urlIntent);
+                } catch (Exception e){
+                    Log.d("에러",""+e);
+                }
             }
         });
+
+
+        //전화걸기
+        callButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Intent callIntent = new Intent("android.intent.action.DIAL", Uri.parse(call));
+                    Log.d("홈페이지연결", call);
+                    startActivity(callIntent);
+                } catch (Exception e){
+                    Log.d("에러",""+e);
+                }
+            }
+        });
+
     }
 }
