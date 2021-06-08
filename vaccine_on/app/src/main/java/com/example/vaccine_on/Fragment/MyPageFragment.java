@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.vaccine_on.ChangeNicknameActivity;
+import com.example.vaccine_on.Activity.ChangeNicknameActivity;
 import com.example.vaccine_on.R;
 
 /**

@@ -5,7 +5,7 @@
     android:id="@+id/hName"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MoreInfoActivity">
+    tools:context=".Activity.MoreInfoActivity">
 
     <TextView
         android:id="@+id/infoView"

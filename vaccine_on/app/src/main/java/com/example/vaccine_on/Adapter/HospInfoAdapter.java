@@ -11,7 +11,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.vaccine_on.HospInfo;
-import com.example.vaccine_on.MoreInfoActivity;
+import com.example.vaccine_on.Activity.MoreInfoActivity;
 import com.example.vaccine_on.R;
 
 import java.util.ArrayList;

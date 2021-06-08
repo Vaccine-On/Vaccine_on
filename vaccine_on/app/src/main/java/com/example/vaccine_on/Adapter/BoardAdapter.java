@@ -11,7 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.vaccine_on.BoardDetailActivity;
+import com.example.vaccine_on.Activity.BoardDetailActivity;
 import com.example.vaccine_on.BoardItemData;
 import com.example.vaccine_on.R;
 
@@ -49,6 +49,7 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.Holder> {
             public void onClick(View v) {
                 if (itemposition != RecyclerView.NO_POSITION) {
                     Intent intent = new Intent(context, BoardDetailActivity.class);
+                    intent.putExtra("boardId", list.get(itemposition).boardId);
                     context.startActivity(intent);
                 }
             }

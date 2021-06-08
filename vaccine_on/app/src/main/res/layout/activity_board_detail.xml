@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BoardDetailActivity">
+    tools:context=".Activity.BoardDetailActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar2"
@@ -41,11 +41,11 @@
                 tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/detail_user_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nanum_square_b"
-                android:text="코로롱"
+                android:text=""
                 android:layout_margin="5dp"/>
         </LinearLayout>
 
@@ -55,38 +55,31 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/detail_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nanum_square_r"
                 android:paddingTop="8dp"
                 android:paddingBottom="3dp"
-                android:text="2021-06-03" />
+                android:text="" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/detail_board_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nanum_square_b"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
-                android:text="코로나 검사 후기.."
+                android:text=""
                 android:textSize="15sp"/>
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/detail_content"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nanum_square_r"
                 android:lineSpacingExtra="6dp"
-                android:text="어제부터 몸에 열이 오르고 오한에 근육통에....갑자기 무서운 생각이
-들어서 아침되자마자 겨우 챙겨서 kf94 마스크 끼고 택시도 조심히
-타고 병원에 갔어요. 병원가서 검사하고 수액 맞고 집에 와서 검사 결
-과 기다리면서 자가격리 했어요....자가격리 하는 동안 온갖 생각이 다
-들더라고요...집-학교만 왔다갔다 했는데 혹시나 내가 걸려서 그 많은
-사람들이 다 검사를 받아야 하는 걸까....오만가지 생각을 하던 중에
-결과가 문자로 왔는데...'음성입니다' 보는 순간 몸에 힘이 탁 풀리면서
-진짜 안도의 폭풍 오열 했습니다...ㅠㅠㅠㅠㅠ" />
+                android:text="" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.example.vaccine_on;
+package com.example.vaccine_on.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.example.vaccine_on.Fragment.BoardFragment;
 import com.example.vaccine_on.Fragment.MainFragment;
 import com.example.vaccine_on.Fragment.MyPageFragment;
+import com.example.vaccine_on.R;
 
 public class MainActivity extends AppCompatActivity {
     private final int mainFragment = 1;

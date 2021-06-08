@@ -1,4 +1,4 @@
-package com.example.vaccine_on;
+package com.example.vaccine_on.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.vaccine_on.R;
 
 public class MoreInfoActivity extends AppCompatActivity {
 

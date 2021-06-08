@@ -1,4 +1,4 @@
-package com.example.vaccine_on;
+package com.example.vaccine_on.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.vaccine_on.R;
 
 public class ChangeNicknameActivity extends AppCompatActivity {
     EditText insert_nickname;
