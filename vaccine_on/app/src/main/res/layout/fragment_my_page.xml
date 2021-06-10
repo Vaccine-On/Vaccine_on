@@ -178,6 +178,7 @@
 
         // 내가 쓴 게시글
         <TextView
+            android:id="@+id/my_board"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:gravity="center_vertical"
@@ -187,7 +188,8 @@
             android:text="내가 쓴 게시글"
             android:paddingLeft="10dp"
             android:textSize="15sp"
-            android:clickable="true"/>
+            android:clickable="true"
+            android:onClick="text_Click"/>
 
     </LinearLayout>
     </ScrollView>

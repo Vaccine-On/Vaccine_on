@@ -1,4 +1,4 @@
-package com.example.vaccine_on;
+package com.example.vaccine_on.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.example.vaccine_on.R;
 
 public class PasswordChangeActivity extends AppCompatActivity {
     EditText insert_password;

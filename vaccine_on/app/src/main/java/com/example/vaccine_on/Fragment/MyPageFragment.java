@@ -2,18 +2,20 @@ package com.example.vaccine_on.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+
 import com.example.vaccine_on.Activity.ChangeNicknameActivity;
-import com.example.vaccine_on.PasswordChangeActivity;
+import com.example.vaccine_on.Activity.PasswordChangeActivity;
+import com.example.vaccine_on.Adapter.MyBoardAdpater;
+import com.example.vaccine_on.MyboardActivity;
 import com.example.vaccine_on.R;
 
 /**
@@ -79,6 +81,7 @@ public class MyPageFragment extends Fragment {
         // 클릭 이벤트
         TextView text_nickname = (TextView)rootview.findViewById(R.id.change_nickname);
         TextView text_password = (TextView)rootview.findViewById(R.id.change_password);
+        TextView text_myboard = (TextView)rootview.findViewById(R.id.my_board);
 
         // 닉네임 변경 화면으로 이동
         text_nickname.setOnClickListener(new View.OnClickListener() {
@@ -94,6 +97,16 @@ public class MyPageFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), PasswordChangeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // 내가 쓴 게시글 화면으로 이동
+        // 임시로 게시판 프래그먼트로 연결
+        text_myboard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), MyboardActivity.class);
                 startActivity(intent);
             }
         });
