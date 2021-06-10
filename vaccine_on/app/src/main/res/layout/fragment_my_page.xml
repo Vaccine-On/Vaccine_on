@@ -35,7 +35,7 @@
                 android:layout_weight="1"
                 android:paddingLeft="30dp"
                 android:fontFamily="@font/nanum_square_b"
-                android:text="닉네임"
+                android:text="코로롱"
                 android:textSize="18sp"/>
 
         </LinearLayout>
