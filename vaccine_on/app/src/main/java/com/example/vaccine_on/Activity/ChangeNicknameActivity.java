@@ -11,9 +11,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.vaccine_on.R;
 
+import com.example.vaccine_on.Fragment.MyPageFragment;
+
 public class ChangeNicknameActivity extends AppCompatActivity {
     EditText insert_nickname;
-    Button button;
+    Button btn_nickname;
+    TextView show_nickname;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -21,19 +24,20 @@ public class ChangeNicknameActivity extends AppCompatActivity {
         setContentView(R.layout.activity_change_nickname);
 
         insert_nickname = (EditText) findViewById(R.id.insert_nickname);
-        button = (Button) findViewById(R.id.button);
+        btn_nickname = (Button) findViewById(R.id.btn_nickname);
+        show_nickname = (TextView) findViewById(R.id.show_nickname);
 
         Intent intent = getIntent();
 
+        btn_nickname.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //show_nickname.setText(insert_nickname.getText());
 
+                Intent intent = new Intent(ChangeNicknameActivity.this, MyPageFragment.class);
+                startActivity(intent);
+            }
+        });
 
-    }
-
-    // EditText에 적은 것이 TextView에 나타나도록
-    public void btn_Click(View view) {
-        TextView textView = (TextView)findViewById(R.id.show_nickname);
-        EditText editText = (EditText) findViewById(R.id.insert_nickname);
-
-        textView.setText(editText.getText());
     }
 }

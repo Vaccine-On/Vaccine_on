@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.vaccine_on.Activity.ChangeNicknameActivity;
+import com.example.vaccine_on.PasswordChangeActivity;
 import com.example.vaccine_on.R;
 
 /**
@@ -64,15 +65,6 @@ public class MyPageFragment extends Fragment {
 
     }
 
-    // 클릭 이벤트
-    /*public void text_Click(View view) {
-        if (view.getId() == R.id.change_nickname) {
-            Intent intent = new Intent(getActivity(), ChangeNicknameActivity.class);
-            startActivity(intent);
-        }
-
-    }*/
-
 
 
     //프래그먼트 화면 전환
@@ -84,16 +76,30 @@ public class MyPageFragment extends Fragment {
 
         ViewGroup rootview = (ViewGroup)inflater.inflate(R.layout.fragment_my_page, container, false);
 
+        // 클릭 이벤트
+        TextView text_nickname = (TextView)rootview.findViewById(R.id.change_nickname);
+        TextView text_password = (TextView)rootview.findViewById(R.id.change_password);
 
-        TextView text = (TextView)rootview.findViewById(R.id.change_nickname);
-
-        text.setOnClickListener(new View.OnClickListener() {
+        // 닉네임 변경 화면으로 이동
+        text_nickname.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), ChangeNicknameActivity.class);
                 startActivity(intent);
             }
         });
+
+        // 비밀번호 변경 화면으로 이동
+        text_password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), PasswordChangeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
 
 
         // 사용자 정보 가져오기
