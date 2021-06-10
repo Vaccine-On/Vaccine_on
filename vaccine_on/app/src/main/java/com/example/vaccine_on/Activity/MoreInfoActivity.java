@@ -42,12 +42,20 @@ public class MoreInfoActivity extends AppCompatActivity {
         Log.d("상세보기", "성공" + intent.getStringExtra("name"));
 
 
+        String urlAdress = intent.getStringExtra("url");
+        //병원 사이트 이동
+        Log.d("연결 전", urlAdress);
+
         urlbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent urlIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(homepage.toString()));
-                Log.d("홈페이지연결", homepage.toString());
-                startActivity(urlIntent);
+                try {
+                    Intent urlIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(urlAdress));
+                    Log.d("홈페이지연결", urlAdress);
+                    startActivity(urlIntent);
+                } catch (Exception e){
+                    Log.d("에러",""+e);
+                }
             }
         });
     }
