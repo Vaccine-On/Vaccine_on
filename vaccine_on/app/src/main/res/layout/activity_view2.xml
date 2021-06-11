@@ -81,6 +81,24 @@
                 android:lineSpacingExtra="6dp"
                 android:text="빠르고 편하긴 했다" />
         </LinearLayout>
+
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_margin="60dp"
+        android:fontFamily="@font/nanum_square_b"
+        android:text="삭제"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:backgroundTint="@color/main_color2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.947" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

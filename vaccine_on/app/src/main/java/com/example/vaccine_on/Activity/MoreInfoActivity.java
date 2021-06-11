@@ -29,9 +29,10 @@ public class MoreInfoActivity extends AppCompatActivity {
         TextView tel = findViewById(R.id.tel);
         TextView homepage = findViewById(R.id.homepage);
         Button urlbutton = findViewById(R.id.urlButton);
+        TextView clCdNmView = findViewById(R.id.clCdNmView);
 
 
-
+        // 상세정보 보여주기
         Intent intent = getIntent();
         Log.d("겟 인텐트", "성공");
         infoView.setText(intent.getStringExtra("name"));
@@ -39,6 +40,7 @@ public class MoreInfoActivity extends AppCompatActivity {
         address.setText(intent.getStringExtra("addr"));
         tel.setText(intent.getStringExtra("tel"));
         homepage.setText(intent.getStringExtra("url"));
+        clCdNmView.setText(intent.getStringExtra("clCdNm"));
         Log.d("상세보기", "성공" + intent.getStringExtra("name"));
 
 

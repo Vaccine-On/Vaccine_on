@@ -82,6 +82,7 @@ public class HospInfoAdapter extends RecyclerView.Adapter<HospInfoAdapter.ViewHo
                     intent.putExtra("addr", hospInfo.getHospitalAddr());
                     intent.putExtra("tel", hospInfo.getHospitalTelNo());
                     intent.putExtra("url", hospInfo.getHospitalUrl());
+                    intent.putExtra("clCdNm", hospInfo.getHospitalclCdNm());
                     Log.d("액티비티", "데이터 보내기");
                     mContext.startActivity(intent);
                 }
